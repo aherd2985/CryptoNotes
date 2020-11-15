@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "+GfhRbNp02yN1DnNB85Z2zrz2YjIh3pt+D90EBxwvDp/aVzk5y0VPjhBT/KOWLXz/NnAojWBWnw+FznYcQVRcA==",
+  "success": true,
+  "projectFilePath": "/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes/CryptoNotes.csproj",
+  "expectedPackageFiles": [
+    "/Users/andrew.herd/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/pgpcore/3.2.0/pgpcore.3.2.0.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/portable.bouncycastle/1.8.8/portable.bouncycastle.1.8.8.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/andrew.herd/.nuget/packages/xamarin.forms/4.6.0.1141/xamarin.forms.4.6.0.1141.nupkg.sha512"
+  ],
+  "logs": []
+}

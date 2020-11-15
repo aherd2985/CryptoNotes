@@ -1,0 +1,71 @@
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/CryptoNotes.iOS.exe
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/CryptoNotes.iOS.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/PgpCore.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/BouncyCastle.Crypto.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Essentials.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ar/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ca/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/cs/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/da/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/de/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/el/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/es/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/fi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/fr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/he/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/hi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/hr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/hu/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/id/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/it/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ja/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ko/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ms/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/nb/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/nl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/pl/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/pt-br/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/pt/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ro/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/ru/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/sk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/sv/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/th/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/tr/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/uk/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/vi/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Calabash.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/CryptoNotes.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/CryptoNotes.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/ibtool/_BundleResourceWithLogicalName.items
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/actool/_PartialAppManifest.items
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/actool/_BundleResourceWithLogicalName.items
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/coremlc/_PartialAppManifest.items
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/coremlc/_BundleResourceWithLogicalName.items
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_about.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_about@2x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_about@3x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_feed.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_feed@2x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/tab_feed@3x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/xamarin_logo.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/xamarin_logo@2x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/xamarin_logo@3x.png
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 8 plus-13.7/optimized/
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/CryptoNotes.iOS.csprojAssemblyReference.cache
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/CryptoNotes.iOS.csproj.CoreCompileInputs.cache
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/XamlC.stamp
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/CryptoNotes.iOS.csproj.CopyComplete
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/CryptoNotes.iOS.exe
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.iOS/obj/iPhoneSimulator/Debug/CryptoNotes.iOS.pdb

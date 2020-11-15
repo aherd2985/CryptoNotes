@@ -1,0 +1,10 @@
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/bin/Debug/CryptoNotes.UITests.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/bin/Debug/CryptoNotes.UITests.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/bin/Debug/nunit.framework.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/bin/Debug/nunit.framework.pdb
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/bin/Debug/Xamarin.UITest.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/obj/Debug/CryptoNotes.UITests.csprojAssemblyReference.cache
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/obj/Debug/CryptoNotes.UITests.csproj.CoreCompileInputs.cache
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/obj/Debug/CryptoNotes.UITests.csproj.CopyComplete
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/obj/Debug/CryptoNotes.UITests.dll
+/Users/andrew.herd/Projects/CryptoNotes/CryptoNotes.UITests/obj/Debug/CryptoNotes.UITests.pdb
