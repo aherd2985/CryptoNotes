@@ -30,6 +30,12 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+CryptoNotes/[Bb]in/
+CryptoNotes/[Oo]bj/
+CryptoNotes.Android/[Bb]in/
+CryptoNotes.Android/[Oo]bj/
+CryptoNotes.iOS/[Bb]in/
+CryptoNotes.iOS/[Oo]bj/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
