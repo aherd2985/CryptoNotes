@@ -31,10 +31,24 @@ namespace CryptoNotes.Views
         switch (id)
         {
           case (int)MenuItemType.Browse:
+            MenuPages.Clear();
             MenuPages.Add(id, new NavigationPage(new ItemsPage()));
             break;
           case (int)MenuItemType.About:
+            MenuPages.Clear();
             MenuPages.Add(id, new NavigationPage(new AboutPage()));
+            break;
+          case (int)MenuItemType.PublicKeys:
+            MenuPages.Clear();
+            MenuPages.Add(id, new NavigationPage(new PublicKeyChainPage()));
+            break;
+          case (int)MenuItemType.EncryptMessage:
+            MenuPages.Clear();
+            MenuPages.Add(id, new NavigationPage(new EncryptMessagePage()));
+            break;
+          case (int)MenuItemType.DecryptMessage:
+            MenuPages.Clear();
+            MenuPages.Add(id, new NavigationPage(new DecryptMessagePage()));
             break;
         }
       }

@@ -17,20 +17,19 @@ namespace CryptoNotes.Views
 
       menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },
                 //manage, generate, private keys name them
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Private Keys" },
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Your Keys" },
                 //manage name sort by contact/keyname
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Keychain" },
+                new HomeMenuItem {Id = MenuItemType.PublicKeys, Title="Shared Keys" },
                 //send public key
-                new HomeMenuItem {Id = MenuItemType.About, Title="Invite" },
+                //new HomeMenuItem {Id = MenuItemType.About, Title="Invite" },
                 //links to report crimes, help lines, etc
-                new HomeMenuItem {Id = MenuItemType.About, Title="Report" },
+                //new HomeMenuItem {Id = MenuItemType.About, Title="Report" },
                 //dropdown pick private key, write message, hit encrypt, copy output
-                new HomeMenuItem {Id = MenuItemType.About, Title="Encrypt" },
+                new HomeMenuItem {Id = MenuItemType.EncryptMessage, Title="Encrypt" },
                 //dropdown pick keychain, hit decrypt, display message
-                new HomeMenuItem {Id = MenuItemType.About, Title="Decrpyt" }
+                new HomeMenuItem {Id = MenuItemType.DecryptMessage, Title="Decrpyt" }
             };
 
       ListViewMenu.ItemsSource = menuItems;

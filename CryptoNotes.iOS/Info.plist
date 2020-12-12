@@ -23,9 +23,9 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>CryptoNotes</string>
+	<string>Crypto Notes</string>
 	<key>CFBundleIdentifier</key>
-	<string>TechnoHerder.CryptoNotes</string>
+	<string>com.TechnoHerder.CryptoNotes</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>UILaunchStoryboardName</key>
@@ -38,5 +38,7 @@
 	<array>
 		<string>clacon.ttf</string>
 	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 </dict>
 </plist>

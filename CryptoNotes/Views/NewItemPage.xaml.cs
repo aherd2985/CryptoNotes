@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+using PgpCore;
 using CryptoNotes.Models;
+using System.IO;
 
 namespace CryptoNotes.Views
 {
@@ -35,5 +33,31 @@ namespace CryptoNotes.Views
     {
       await Navigation.PopModalAsync();
     }
+
+    async void GeneratePrivateKey(System.Object sender, System.EventArgs e)
+    {
+      using (PGP pgp = new PGP())
+      {
+        string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "public.asc");
+        string fileName2 = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "private.asc");
+        // Generate keys
+        pgp.GenerateKey(fileName, fileName2, Item.EmailKey, Item.PasswordKey);
+
+        Item.PrivateKey = File.ReadAllText(fileName2);
+        Item.PublicKey = File.ReadAllText(fileName);
+
+        using (var streamWriter = new StreamWriter(fileName, true))
+          streamWriter.WriteLine(DateTime.UtcNow);
+
+        using (var streamWriter = new StreamWriter(fileName2, true))
+          streamWriter.WriteLine(DateTime.UtcNow);
+
+        MessagingCenter.Send(this, "AddItem", Item);
+        await Navigation.PopModalAsync();
+      }
+    }
+
+
+
   }
 }

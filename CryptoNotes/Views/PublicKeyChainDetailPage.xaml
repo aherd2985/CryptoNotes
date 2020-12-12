@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CryptoNotes.Views.PublicKeyChainDetailPage" Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+                        <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="20" Padding="15" BackgroundColor="Black">
+            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Title:" FontSize="45" />
+            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Text}"
+                    BackgroundColor="#141d2b" FontSize="55" />
+            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description:" FontSize="45" />
+            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Description}"
+                    FontSize="50" BackgroundColor="#141d2b"  />
+            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45" />
+            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
+                    FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" />
+            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Public Key:" FontSize="45" />
+            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PublicKey}"
+                    FontSize="25" BackgroundColor="#141d2b" IsReadOnly="true" />
+        </StackLayout>
+                            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,9 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
-
 using CryptoNotes.Models;
 using CryptoNotes.Views;
 
@@ -23,9 +21,15 @@ namespace CryptoNotes.ViewModels
 
       MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
       {
-        var newItem = item as Item;
+        Item newItem = item as Item;
+        newItem.Id = Guid.NewGuid().ToString();
         Items.Add(newItem);
         await DataStore.AddItemAsync(newItem);
+      });
+
+      MessagingCenter.Subscribe<ItemDetailPage, Item>(this, "RemoveItem", async (obj, item) =>
+      {
+        await DataStore.DeleteItemAsync(item.Id);
       });
     }
 
@@ -39,7 +43,8 @@ namespace CryptoNotes.ViewModels
         var items = await DataStore.GetItemsAsync(true);
         foreach (var item in items)
         {
-          Items.Add(item);
+          if(!string.IsNullOrEmpty(item.PrivateKey))
+            Items.Add(item);
         }
       }
       catch (Exception ex)

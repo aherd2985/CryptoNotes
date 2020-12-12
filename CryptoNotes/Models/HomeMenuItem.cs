@@ -3,7 +3,10 @@
   public enum MenuItemType
   {
     Browse,
-    About
+    About,
+    PublicKeys,
+    EncryptMessage,
+    DecryptMessage
   }
   public class HomeMenuItem
   {

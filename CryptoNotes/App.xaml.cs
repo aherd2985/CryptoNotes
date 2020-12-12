@@ -28,5 +28,7 @@ namespace CryptoNotes
     protected override void OnResume()
     {
     }
+
+    
   }
 }

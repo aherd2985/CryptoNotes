@@ -14,26 +14,26 @@ namespace CryptoNotes.Services
     {
       items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Private", Description="This is a private key." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Public", Description="This is a public key." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Third", Description="Whatever" }
             };
     }
 
     public async Task<bool> AddItemAsync(Item item)
     {
-      items.Add(item);
+      IEnumerable<Item> test = items.Where(x => x.Text.Equals(item.Text));
+      if(test.Count() == 0)
+        items.Add(item);
 
       return await Task.FromResult(true);
     }
 
     public async Task<bool> UpdateItemAsync(Item item)
     {
-      var oldItem = items.Where((Item arg) => arg.Id == item.Id).FirstOrDefault();
-      items.Remove(oldItem);
+      IEnumerable<Item> oldItem = items.Where((Item arg) => arg.Id.Equals(item.Id));
+      if (oldItem.Count() == 0)
+        items.Remove(oldItem.First());
       items.Add(item);
 
       return await Task.FromResult(true);
@@ -41,15 +41,15 @@ namespace CryptoNotes.Services
 
     public async Task<bool> DeleteItemAsync(string id)
     {
-      var oldItem = items.Where((Item arg) => arg.Id == id).FirstOrDefault();
-      items.Remove(oldItem);
-
+      IEnumerable<Item> oldItem = items.Where((Item arg) => arg.Id.Equals(id));
+      if (oldItem.Count() == 1)
+        items.Remove(oldItem.First());
       return await Task.FromResult(true);
     }
 
     public async Task<Item> GetItemAsync(string id)
     {
-      return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+      return await Task.FromResult(items.FirstOrDefault(s => s.Id.Equals(id)));
     }
 
     public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
