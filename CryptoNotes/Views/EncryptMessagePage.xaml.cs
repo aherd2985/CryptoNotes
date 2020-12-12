@@ -26,11 +26,22 @@ namespace CryptoNotes.Views
 
     }
 
+    void OnToggled(object sender, ToggledEventArgs e)
+    {
+      // Perform an action after examining e.Value
+      if (e.Value)
+        privatePicker.IsVisible = true;
+      else
+        privatePicker.IsVisible = false;
+    }
+
 
     async void EncryptMessageClicked(System.Object sender, System.EventArgs e)
     {
       Item test = privatePicker.SelectedItem as Item;
       string derp = test.PrivateKey;
+      
+      //string herp = MessageTxt.
       /*
        try
       {

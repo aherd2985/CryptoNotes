@@ -9,12 +9,14 @@ namespace CryptoNotes.ViewModels
   {
     public List<Item> PublicItems { get; set; }
     public List<Item> PrivateItems { get; set; }
+    public string MessageTxt { get; set; }
 
     public EncryptMessageViewModel()
     {
       Title = "Encryptor";
       PrivateItems = new List<Item>();
       PublicItems = new List<Item>();
+      MessageTxt = "";
     }
 
     public List<Item> GetPublicItems()
