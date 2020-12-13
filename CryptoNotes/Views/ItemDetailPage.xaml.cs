@@ -23,7 +23,7 @@ namespace CryptoNotes.Views
     {
       InitializeComponent();
 
-      var item = new Item
+      Item item = new Item
       {
         Text = "Item 1",
         Description = "This is an item description."

@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CryptoNotes.Views.EncryptMessagePage" Title="Encryptor">
     <ContentPage.Content>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}" RefreshColor="Red"    
+             Command="{Binding RefreshViewCommand}">
             <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="20" Padding="15">
                     
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Sign Message?" FontSize="45" />
 
-                    <Switch OnColor="Purple" ThumbColor="Gray" IsToggled="true"  Toggled="OnToggled" />
+                    <Switch x:Name="SignedF" OnColor="Purple" ThumbColor="Gray" IsToggled="true"  Toggled="OnToggled" />
                     <Picker x:Name="privatePicker"
                             Title="Select Private Key"
                             TitleColor="Red">
@@ -19,16 +21,16 @@
 
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Phone Number:" FontSize="45" />
                     
-                    <Editor FontFamily="{StaticResource ConsoleCode}" Placeholder="+1 555 555 55555"
+                    <Editor x:Name="PhoneTxt" FontFamily="{StaticResource ConsoleCode}" Placeholder="+1 555 555 55555"
                             FontSize="45"  Keyboard="Telephone" BackgroundColor="#141d2b" PlaceholderColor="LightGray"
-                            TextColor="#ffaf00"  
+                            TextColor="#ffaf00" 
                             />
 
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Message:" FontSize="45" />
 
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Placeholder="Message here"
+            <Editor x:Name="MessageTxt" TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Placeholder="Message here"
                     FontSize="50" BackgroundColor="#141d2b" PlaceholderColor="LightGray" HeightRequest="200"
-                    x:Name="SafeMessage" Keyboard="Chat"
+                    Keyboard="Chat" 
                     />
 
             <Button Margin="0,10,0,0" Text="Encrpyt Message" Command="{Binding OpenWebCommand}"
@@ -36,5 +38,6 @@
 
             </StackLayout>
         </ScrollView>
+            </RefreshView>
     </ContentPage.Content>
 </ContentPage>

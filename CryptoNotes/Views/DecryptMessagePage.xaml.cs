@@ -4,8 +4,6 @@ using CryptoNotes.ViewModels;
 using PgpCore;
 using Xamarin.Forms;
 
-using Xamarin.Forms;
-
 namespace CryptoNotes.Views
 {
   public partial class DecryptMessagePage : ContentPage

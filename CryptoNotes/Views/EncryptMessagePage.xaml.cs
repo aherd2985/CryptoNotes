@@ -1,5 +1,10 @@
-﻿using CryptoNotes.Models;
+﻿using System;
+using System.IO;
+using System.Text;
+using CryptoNotes.Models;
 using CryptoNotes.ViewModels;
+using PgpCore;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace CryptoNotes.Views
@@ -7,6 +12,8 @@ namespace CryptoNotes.Views
   public partial class EncryptMessagePage : ContentPage
   {
     EncryptMessageViewModel viewModel;
+    public Encrypt EncryptData { get; set; }
+
     public EncryptMessagePage()
     {
       InitializeComponent();
@@ -14,6 +21,9 @@ namespace CryptoNotes.Views
       viewModel = new EncryptMessageViewModel();
       viewModel.GetPublicItems();
       viewModel.GetPrivateItems();
+
+      //MessageTxt = "test";
+      //PhoneTxt
 
       privatePicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       privatePicker.ItemDisplayBinding = new Binding("Text");
@@ -23,7 +33,7 @@ namespace CryptoNotes.Views
       publicPicker.ItemDisplayBinding = new Binding("Text");
       publicPicker.ItemsSource = viewModel.PublicItems;
 
-
+      int i = 1;
     }
 
     void OnToggled(object sender, ToggledEventArgs e)
@@ -38,53 +48,54 @@ namespace CryptoNotes.Views
 
     async void EncryptMessageClicked(System.Object sender, System.EventArgs e)
     {
-      Item test = privatePicker.SelectedItem as Item;
-      string derp = test.PrivateKey;
+      //if(SignedF.IsToggled)
+      Item privateKey = privatePicker.SelectedItem as Item;
+      Item publicKey = this.privatePicker.SelectedItem as Item;
       
+      int i = 1;
+      bool dup = SignedF.IsToggled;
+
       //string herp = MessageTxt.
-      /*
+      
        try
       {
-        string publicFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "public.asc");
-        string privateFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "private.asc");
-        string encryptedMessage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "encryptedAndSigned.pgp");
-        string messageContent = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "content.txt");
-
-        using (var streamWriter = new StreamWriter(publicFile, true))
-          streamWriter.WriteLine(viewModel.Item.PublicKey);
-
-        using (var streamWriter = new StreamWriter(privateFile, true))
-          streamWriter.WriteLine(viewModel.Item.PrivateKey);
-
-        using (var streamWriter = new StreamWriter(messageContent, true))
-          streamWriter.WriteLine(viewModel.Item.SafeMessage);
-
-
         using (PGP pgp = new PGP())
         {
-          // Encrypt file and sign
-          await pgp.EncryptFileAndSignAsync(messageContent, encryptedMessage, publicFile, privateFile, viewModel.Item.PasswordKey, true, true);
+          byte[] byteArray = Encoding.ASCII.GetBytes(privateKey.PrivateKey);
+          Stream privateKeyStream = new MemoryStream(byteArray);
+
+          byte[] publicByteArray = Encoding.ASCII.GetBytes(publicKey.PublicKey);
+          Stream publicKeyStream = new MemoryStream(publicByteArray);
+
+          byte[] inputByteArray = Encoding.ASCII.GetBytes(MessageTxt.Text);
+          Stream inputFileStream = new MemoryStream(inputByteArray);
+
+          System.IO.Stream outputFileStream = new MemoryStream();
+
+
+
+          // Encrypt and sign stream
+          await pgp.EncryptStreamAndSignAsync(inputFileStream, outputFileStream, publicKeyStream
+                                            , privateKeyStream, privateKey.PasswordKey, true, true);
+
+
+
+          StreamReader reader = new StreamReader(outputFileStream);
+         string encryptedMessage = await reader.ReadToEndAsync();
+
+          privateKeyStream.Dispose();
+          publicKeyStream.Dispose();
+          inputFileStream.Dispose();
+          outputFileStream.Dispose();
+          reader.Dispose();
+
+          // string encryptedMessage = 
+          var message = new SmsMessage(encryptedMessage, new[] { PhoneTxt.Text });
+
+          await Sms.ComposeAsync(message);
+
         }
 
-
-
-        // string encryptedMessage = 
-        var message = new SmsMessage(File.ReadAllText(encryptedMessage), new[] { "19182600911" });
-
-        using (var streamWriter = new StreamWriter(messageContent, true))
-          streamWriter.WriteLine(DateTime.UtcNow);
-
-        using (var streamWriter = new StreamWriter(encryptedMessage, true))
-          streamWriter.WriteLine(DateTime.UtcNow);
-
-        using (var streamWriter = new StreamWriter(publicFile, true))
-          streamWriter.WriteLine(DateTime.UtcNow);
-
-        using (var streamWriter = new StreamWriter(privateFile, true))
-          streamWriter.WriteLine(DateTime.UtcNow);
-
-
-        await Sms.ComposeAsync(message);
       }
       catch (FeatureNotSupportedException ex)
       {
@@ -94,8 +105,12 @@ namespace CryptoNotes.Views
       {
         // Other error has occurred.
       }
-      await Navigation.PopAsync();
-      */
+
+      MessageTxt.Text = string.Empty;
+      PhoneTxt.Text = string.Empty;
+      privatePicker.SelectedIndex = -1;
+      publicPicker.SelectedIndex = -1;
+
     }
 
 
