@@ -9,22 +9,15 @@
                     
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Sign Message?" FontSize="45" />
 
-                    <Switch x:Name="SignedF" OnColor="Purple" ThumbColor="Gray" IsToggled="true"  Toggled="OnToggled" />
+                    <Switch x:Name="SignedF" OnColor="Purple" ThumbColor="Gray" IsToggled="False"  Toggled="OnToggled" />
                     <Picker x:Name="privatePicker"
-                            Title="Select Private Key"
+                            Title="Select Private Key" IsVisible="false"
                             TitleColor="Red">
                     </Picker>
                     <Picker x:Name="publicPicker"
                             Title="Select Public"
                             TitleColor="Red">
                     </Picker>
-
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Phone Number:" FontSize="45" />
-                    
-                    <Editor x:Name="PhoneTxt" FontFamily="{StaticResource ConsoleCode}" Placeholder="+1 555 555 55555"
-                            FontSize="45"  Keyboard="Telephone" BackgroundColor="#141d2b" PlaceholderColor="LightGray"
-                            TextColor="#ffaf00" 
-                            />
 
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Message:" FontSize="45" />
 

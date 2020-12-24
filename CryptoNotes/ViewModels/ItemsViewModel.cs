@@ -24,12 +24,12 @@ namespace CryptoNotes.ViewModels
         Item newItem = item as Item;
         newItem.Id = Guid.NewGuid().ToString();
         Items.Add(newItem);
-        await DataStore.AddItemAsync(newItem);
+        await Database.SaveItemAsync(newItem);
       });
 
       MessagingCenter.Subscribe<ItemDetailPage, Item>(this, "RemoveItem", async (obj, item) =>
       {
-        await DataStore.DeleteItemAsync(item.Id);
+        await Database.DeleteItemAsync(item);
       });
     }
 
@@ -40,7 +40,7 @@ namespace CryptoNotes.ViewModels
       try
       {
         Items.Clear();
-        var items = await DataStore.GetItemsAsync(true);
+        var items = await Database.GetItemsAsync();
         foreach (var item in items)
         {
           if(!string.IsNullOrEmpty(item.PrivateKey))

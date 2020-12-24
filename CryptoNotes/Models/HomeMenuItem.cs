@@ -6,7 +6,8 @@
     About,
     PublicKeys,
     EncryptMessage,
-    DecryptMessage
+    DecryptMessage,
+    Invite
   }
   public class HomeMenuItem
   {

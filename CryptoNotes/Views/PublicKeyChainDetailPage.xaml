@@ -9,16 +9,16 @@
         <StackLayout Spacing="20" Padding="15" BackgroundColor="Black">
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Title:" FontSize="45" />
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Text}"
-                    BackgroundColor="#141d2b" FontSize="55" />
+                    BackgroundColor="#141d2b" FontSize="55" Keyboard="Text" />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description:" FontSize="45" />
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Description}"
-                    FontSize="50" BackgroundColor="#141d2b"  />
+                    FontSize="50" BackgroundColor="#141d2b" Keyboard="Chat" />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45" />
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
-                    FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" />
+                    FontSize="50" BackgroundColor="#141d2b" Keyboard="Email" />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Public Key:" FontSize="45" />
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PublicKey}"
-                    FontSize="25" BackgroundColor="#141d2b" IsReadOnly="true" />
+                    FontSize="25" BackgroundColor="#141d2b" />
         </StackLayout>
                             </ScrollView>
     </ContentPage.Content>

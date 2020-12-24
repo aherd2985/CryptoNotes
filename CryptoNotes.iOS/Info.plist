@@ -40,5 +40,7 @@
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>NSContactsUsageDescription</key>
+	<string>This application uses your Contacts to send invites &amp; Messages - Read Only</string>
 </dict>
 </plist>

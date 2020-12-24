@@ -8,7 +8,15 @@
                             Title="Select Private Key"
                             TitleColor="Red">
                     </Picker>
-            <Button Margin="0,10,0,0" Text="Encrpyt Message" Command="{Binding OpenWebCommand}"
+
+            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Message:" FontSize="45" />
+
+            <Editor x:Name="MessageTxt" TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Placeholder="Message here"
+                    FontSize="50" BackgroundColor="#141d2b" PlaceholderColor="LightGray" HeightRequest="200"
+                    Keyboard="Chat" 
+                    />
+
+            <Button Margin="0,10,0,0" Text="Decrpyt Message" Command="{Binding OpenWebCommand}"
                     BackgroundColor="#007fdf" TextColor="White" Clicked="DecryptMessageClicked" />
             </StackLayout>
         </ScrollView>

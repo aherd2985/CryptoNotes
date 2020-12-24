@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using CryptoNotes.Models;
 using CryptoNotes.ViewModels;
 using PgpCore;
@@ -26,13 +28,16 @@ namespace CryptoNotes.Views
 
       privatePicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       privatePicker.ItemDisplayBinding = new Binding("Text");
-      privatePicker.ItemsSource = viewModel.PrivateItems;
+      privatePicker.ItemsSource = viewModel.PrivateItems.Where(x => x.PasswordKey != null && x.EmailKey != null).ToList();
+
+      List<Item> allItems = viewModel.PrivateItems;
+      allItems.AddRange(viewModel.PublicItems);
 
       publicPicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       publicPicker.ItemDisplayBinding = new Binding("Text");
-      publicPicker.ItemsSource = viewModel.PublicItems;
+      publicPicker.ItemsSource = allItems;
 
-      int i = 1;
+
     }
 
     void OnToggled(object sender, ToggledEventArgs e)
@@ -47,27 +52,16 @@ namespace CryptoNotes.Views
 
     async void EncryptMessageClicked(System.Object sender, System.EventArgs e)
     {
-      //if(SignedF.IsToggled)
-      Item privateKey = privatePicker.SelectedItem as Item;
-      Item publicKey = this.privatePicker.SelectedItem as Item;
+      Item publicKey = this.publicPicker.SelectedItem as Item;
       
-      int i = 1;
-      bool dup = SignedF.IsToggled;
-
-      //string herp = MessageTxt.
-      
-       try
+      try
       {
         string publicFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "public.asc");
-        string privateFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "private.asc");
         string encryptedMessage = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "encryptedAndSigned.pgp");
         string messageContent = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "content.txt");
 
         using (var streamWriter = new StreamWriter(publicFile, true))
           streamWriter.WriteLine(publicKey.PublicKey);
-
-        using (var streamWriter = new StreamWriter(privateFile, true))
-          streamWriter.WriteLine(privateKey.PrivateKey);
 
         using (var streamWriter = new StreamWriter(messageContent, true))
           streamWriter.WriteLine(MessageTxt.Text);
@@ -76,7 +70,25 @@ namespace CryptoNotes.Views
         using (PGP pgp = new PGP())
         {
           // Encrypt file and sign
-          await pgp.EncryptFileAndSignAsync(messageContent, encryptedMessage, publicFile, privateFile, privateKey.PasswordKey, true, true);
+
+          if (SignedF.IsToggled)
+          {
+            Item privateKey = privatePicker.SelectedItem as Item;
+            if (string.IsNullOrEmpty(privateKey.EmailKey))
+              privateKey.EmailKey = "";
+            if (string.IsNullOrEmpty(privateKey.PasswordKey))
+              privateKey.PasswordKey = "";
+            string privateFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "private.asc");
+            using (var streamWriter = new StreamWriter(privateFile, true))
+              streamWriter.WriteLine(privateKey.PrivateKey);
+            await pgp.EncryptFileAndSignAsync(messageContent, encryptedMessage, publicFile, privateFile, privateKey.PasswordKey, true, true);
+
+            using (StreamWriter streamWriter = new StreamWriter(privateFile, true))
+              streamWriter.WriteLine(DateTime.UtcNow);
+          }
+          else
+            await pgp.EncryptFileAsync(messageContent, encryptedMessage, publicFile, true, true);
+
 
           /*
            * 
@@ -108,23 +120,24 @@ namespace CryptoNotes.Views
 
         }
 
-        // string encryptedMessage = 
-        var message = new SmsMessage(File.ReadAllText(encryptedMessage), new[] { PhoneTxt.Text });
+        await Share.RequestAsync(new ShareTextRequest
+        {
+          Text = File.ReadAllText(encryptedMessage),
+          Title = "PGP Message",
+          Subject = "PGP Message"
+        });
 
-        using (var streamWriter = new StreamWriter(messageContent, true))
+        using (StreamWriter streamWriter = new StreamWriter(messageContent, true))
           streamWriter.WriteLine(DateTime.UtcNow);
 
-        using (var streamWriter = new StreamWriter(encryptedMessage, true))
+        using (StreamWriter streamWriter = new StreamWriter(encryptedMessage, true))
           streamWriter.WriteLine(DateTime.UtcNow);
 
-        using (var streamWriter = new StreamWriter(publicFile, true))
-          streamWriter.WriteLine(DateTime.UtcNow);
-
-        using (var streamWriter = new StreamWriter(privateFile, true))
+        using (StreamWriter streamWriter = new StreamWriter(publicFile, true))
           streamWriter.WriteLine(DateTime.UtcNow);
 
 
-        await Sms.ComposeAsync(message);
+        //await Sms.ComposeAsync(message);
       }
       catch (FeatureNotSupportedException ex)
       {
@@ -132,16 +145,16 @@ namespace CryptoNotes.Views
       }
       catch (Exception ex)
       {
-        // Other error has occurred.
+        // Other error has occurred. b
       }
 
       MessageTxt.Text = string.Empty;
-      PhoneTxt.Text = string.Empty;
       privatePicker.SelectedIndex = -1;
       publicPicker.SelectedIndex = -1;
 
     }
 
+    
 
 
 

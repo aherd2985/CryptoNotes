@@ -23,7 +23,7 @@ namespace CryptoNotes.Views
                 //manage name sort by contact/keyname
                 new HomeMenuItem {Id = MenuItemType.PublicKeys, Title="Shared Keys" },
                 //send public key
-                //new HomeMenuItem {Id = MenuItemType.About, Title="Invite" },
+                new HomeMenuItem {Id = MenuItemType.Invite, Title="Invite" },
                 //links to report crimes, help lines, etc
                 //new HomeMenuItem {Id = MenuItemType.About, Title="Report" },
                 //dropdown pick private key, write message, hit encrypt, copy output

@@ -50,6 +50,10 @@ namespace CryptoNotes.Views
             MenuPages.Clear();
             MenuPages.Add(id, new NavigationPage(new DecryptMessagePage()));
             break;
+          case (int)MenuItemType.Invite:
+            MenuPages.Clear();
+            MenuPages.Add(id, new NavigationPage(new InvitePage()));
+            break;
         }
       }
 

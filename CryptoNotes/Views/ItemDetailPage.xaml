@@ -17,8 +17,8 @@
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
                     FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Password:" FontSize="45" />
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PasswordKey}"
-                    FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" />
+            <Entry TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PasswordKey}"
+                    FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" IsPassword="true"  />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Private Key:" FontSize="45" />
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PrivateKey}"
                     FontSize="25" BackgroundColor="#141d2b" IsReadOnly="true" />

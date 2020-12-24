@@ -24,11 +24,11 @@ namespace CryptoNotes.ViewModels
     public async Task<List<Item>> GetPrivateItemsAsync()
     {
       PrivateItems.Clear();
-      IEnumerable<Item> items = await DataStore.GetItemsAsync(true);
+      IEnumerable<Item> items = await Database.GetItemsAsync();
       foreach (Item item in items)
       {
         if (!string.IsNullOrEmpty(item.PrivateKey))
-          PrivateItems.Add(item);
+          await Database.SaveItemAsync(item);
       }
       return PrivateItems;
     }

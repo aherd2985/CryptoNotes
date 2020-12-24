@@ -16,8 +16,10 @@ namespace CryptoNotes.Views
 
       Item = new Item
       {
-        Text = "Item name",
-        Description = "This is an item description."
+        Text = "",
+        Description = "",
+        PasswordKey = "",
+        EmailKey = ""
       };
 
       BindingContext = this;
