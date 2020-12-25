@@ -12,19 +12,6 @@ namespace CryptoNotes.ViewModels
 {
   public class BaseViewModel : INotifyPropertyChanged
   {
-    static CryptoNotesDatabase database;
-    public static CryptoNotesDatabase Database
-    {
-      get
-      {
-        if (database == null)
-        {
-          database = new CryptoNotesDatabase();
-        }
-        return database;
-      }
-    }
-
     bool isBusy = false;
     public bool IsBusy
     {

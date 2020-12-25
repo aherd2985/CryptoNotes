@@ -51,7 +51,7 @@
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
-                                <Span Text="It is a secure end-to-end encryption application." />
+                                <Span Text="The intention is to promote security with easing end-to-end encryption procedures." />
                             </FormattedString.Spans>
                         </FormattedString>
                     </Label.FormattedText>

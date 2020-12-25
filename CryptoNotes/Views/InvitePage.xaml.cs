@@ -11,21 +11,13 @@ namespace CryptoNotes.Views
 {
   public partial class InvitePage : ContentPage
   {
-    EncryptMessageViewModel viewModel;
     public InvitePage()
     {
       InitializeComponent();
 
-      viewModel = new EncryptMessageViewModel();
-      viewModel.GetPrivateItems();
-      viewModel.GetPublicItems();
-
-      List<Item> allItems = viewModel.PrivateItems;
-      allItems.AddRange(viewModel.PublicItems);
-
       publicPicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       publicPicker.ItemDisplayBinding = new Binding("Text");
-      publicPicker.ItemsSource = allItems;
+      publicPicker.ItemsSource = App.Database.GetPrivateItemAsync().Result;
     }
 
     async void InviteMessageClicked(System.Object sender, System.EventArgs e)

@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CryptoNotes.Services;
 using CryptoNotes.Views;
@@ -8,12 +7,12 @@ namespace CryptoNotes
 {
   public partial class App : Application
   {
+    static CryptoNotesDatabase database;
 
     public App()
     {
       InitializeComponent();
 
-      DependencyService.Register<MockDataStore>();
       MainPage = new MainPage();
     }
 
@@ -29,6 +28,18 @@ namespace CryptoNotes
     {
     }
 
-    
+    public static CryptoNotesDatabase Database
+    {
+      get
+      {
+        if (database == null)
+        {
+          database = new CryptoNotesDatabase();
+        }
+        return database;
+      }
+    }
+
+
   }
 }

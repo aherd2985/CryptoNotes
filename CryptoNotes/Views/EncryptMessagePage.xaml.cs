@@ -12,30 +12,17 @@ namespace CryptoNotes.Views
 {
   public partial class EncryptMessagePage : ContentPage
   {
-    EncryptMessageViewModel viewModel;
-    public Encrypt EncryptData { get; set; }
-
     public EncryptMessagePage()
     {
       InitializeComponent();
 
-      viewModel = new EncryptMessageViewModel();
-      viewModel.GetPublicItems();
-      viewModel.GetPrivateItems();
-
-      //MessageTxt = "test";
-      //PhoneTxt
-
       privatePicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       privatePicker.ItemDisplayBinding = new Binding("Text");
-      privatePicker.ItemsSource = viewModel.PrivateItems.Where(x => x.PasswordKey != null && x.EmailKey != null).ToList();
-
-      List<Item> allItems = viewModel.PrivateItems;
-      allItems.AddRange(viewModel.PublicItems);
+      privatePicker.ItemsSource = App.Database.GetPrivateItemAsync().Result.Where(x => x.PasswordKey != null && x.EmailKey != null).ToList();
 
       publicPicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       publicPicker.ItemDisplayBinding = new Binding("Text");
-      publicPicker.ItemsSource = allItems;
+      publicPicker.ItemsSource = App.Database.GetItemsAsync().Result;
 
 
     }

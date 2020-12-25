@@ -45,14 +45,19 @@ namespace CryptoNotes.Services
       return Database.QueryAsync<Item>("SELECT * FROM [Item] WHERE [PasswordKey] IS NULL OR [EmailKey] IS NULL;");
     }
 
-    public Task<Item> GetItemAsync(string id)
+    public Task<Item> GetItemAsync(int id)
     {
       return Database.Table<Item>().Where(i => i.Id == id).FirstOrDefaultAsync();
     }
 
+    public Task<List<Item>> GetPrivateItemAsync()
+    {
+      return Database.Table<Item>().Where(x => x.PrivateKey != null).ToListAsync();
+    }
+
     public Task<int> SaveItemAsync(Item item)
     {
-      if (string.IsNullOrEmpty(item.Id))
+      if (item.Id != 0)
       {
         return Database.UpdateAsync(item);
       }
@@ -62,9 +67,11 @@ namespace CryptoNotes.Services
       }
     }
 
-    public Task<int> DeleteItemAsync(Item item)
+    public Task<List<Item>> DeleteItemAsync(Item item)
     {
-      return Database.DeleteAsync(item);
+      //Item deletedItem = GetItemsAsync().Result.Where(x => x.Text == item.Text).FirstOrDefault();
+      return Database.QueryAsync<Item>("DELETE FROM [Item] WHERE [Text] = '" + item.Text + "';");
+      //return Database.DeleteAsync(deletedItem);
     }
   }
 }

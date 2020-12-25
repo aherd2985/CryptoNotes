@@ -9,8 +9,6 @@ using CryptoNotes.Models;
 
 namespace CryptoNotes.Views
 {
-  // Learn more about making custom code visible in the Xamarin.Forms previewer
-  // by visiting https://aka.ms/xamarinforms-previewer
   [DesignTimeVisible(false)]
   public partial class MainPage : MasterDetailPage
   {
@@ -21,7 +19,7 @@ namespace CryptoNotes.Views
 
       MasterBehavior = MasterBehavior.Popover;
 
-      MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+      MenuPages.Add((int)MenuItemType.About, (NavigationPage)Detail);
     }
 
     public async Task NavigateFromMenu(int id)
@@ -57,7 +55,7 @@ namespace CryptoNotes.Views
         }
       }
 
-      var newPage = MenuPages[id];
+      NavigationPage newPage = MenuPages[id];
 
       if (newPage != null && Detail != newPage)
       {

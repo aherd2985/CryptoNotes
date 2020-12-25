@@ -22,14 +22,12 @@ namespace CryptoNotes.ViewModels
       MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
       {
         Item newItem = item as Item;
-        newItem.Id = Guid.NewGuid().ToString();
-        Items.Add(newItem);
-        await Database.SaveItemAsync(newItem);
+        await App.Database.SaveItemAsync(newItem);
       });
 
       MessagingCenter.Subscribe<ItemDetailPage, Item>(this, "RemoveItem", async (obj, item) =>
       {
-        await Database.DeleteItemAsync(item);
+        await App.Database.DeleteItemAsync(item);
       });
     }
 
@@ -40,7 +38,7 @@ namespace CryptoNotes.ViewModels
       try
       {
         Items.Clear();
-        var items = await Database.GetItemsAsync();
+        var items = await App.Database.GetItemsAsync();
         foreach (var item in items)
         {
           if(!string.IsNullOrEmpty(item.PrivateKey))

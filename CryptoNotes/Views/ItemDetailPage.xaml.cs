@@ -26,7 +26,8 @@ namespace CryptoNotes.Views
       Item item = new Item
       {
         Text = "Item 1",
-        Description = "This is an item description."
+        Description = "This is an item description.",
+        Id = 0
       };
 
       viewModel = new ItemDetailViewModel(item);

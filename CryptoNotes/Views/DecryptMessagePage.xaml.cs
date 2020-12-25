@@ -9,17 +9,13 @@ namespace CryptoNotes.Views
 {
   public partial class DecryptMessagePage : ContentPage
   {
-    DecryptMessageViewModel viewModel;
     public DecryptMessagePage()
     {
       InitializeComponent();
 
-      viewModel = new DecryptMessageViewModel();
-      viewModel.GetPrivateItems();
-
       privatePicker.SetBinding(Picker.ItemsSourceProperty, "Item");
       privatePicker.ItemDisplayBinding = new Binding("Text");
-      privatePicker.ItemsSource = viewModel.PrivateItems;
+      privatePicker.ItemsSource = App.Database.GetPrivateItemAsync().Result;
     }
 
     async void DecryptMessageClicked(System.Object sender, System.EventArgs e)
