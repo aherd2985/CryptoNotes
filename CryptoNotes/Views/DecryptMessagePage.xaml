@@ -16,7 +16,7 @@
                     Keyboard="Chat" 
                     />
 
-            <Button Margin="0,10,0,0" Text="Decrpyt Message" Command="{Binding OpenWebCommand}"
+            <Button Margin="0,10,0,0" Text="Decrpyt Message" Command="{Binding OpenWebCommand}" x:Name="decryptBtn"
                     BackgroundColor="#007fdf" TextColor="White" Clicked="DecryptMessageClicked" />
             </StackLayout>
         </ScrollView>

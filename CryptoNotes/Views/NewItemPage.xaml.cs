@@ -38,6 +38,7 @@ namespace CryptoNotes.Views
 
     async void GeneratePrivateKey(System.Object sender, System.EventArgs e)
     {
+      createKeyBtn.FadeTo(0, 4000);
       using (PGP pgp = new PGP())
       {
         string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "public.asc");

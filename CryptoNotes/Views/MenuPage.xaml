@@ -6,6 +6,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid Padding="10">
+                            
                             <Label FontFamily="{StaticResource ConsoleCode}" Text="{Binding Title}" FontSize="50" TextColor="#0086ff" />
                         </Grid>
                     </ViewCell>

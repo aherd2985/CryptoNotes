@@ -39,6 +39,7 @@ namespace CryptoNotes.Views
 
     async void EncryptMessageClicked(System.Object sender, System.EventArgs e)
     {
+      encryptBtn.Opacity = 0;
       Item publicKey = this.publicPicker.SelectedItem as Item;
       
       try
@@ -138,6 +139,7 @@ namespace CryptoNotes.Views
       MessageTxt.Text = string.Empty;
       privatePicker.SelectedIndex = -1;
       publicPicker.SelectedIndex = -1;
+      encryptBtn.Opacity = 1;
 
     }
 

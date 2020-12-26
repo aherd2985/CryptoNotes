@@ -20,6 +20,7 @@ namespace CryptoNotes.Views
 
     async void DecryptMessageClicked(System.Object sender, System.EventArgs e)
     {
+      decryptBtn.Opacity = 0;
       Item privateKey = this.privatePicker.SelectedItem as Item;
 
       //string publicFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "public.asc");
@@ -53,6 +54,7 @@ namespace CryptoNotes.Views
       using (StreamWriter streamWriter = new StreamWriter(privateFile, true))
         streamWriter.WriteLine(DateTime.UtcNow);
 
+      decryptBtn.Opacity = 1;
       await DisplayAlert("Alert", safeMessage, "OK");
 
     }
