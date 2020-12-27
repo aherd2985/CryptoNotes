@@ -27,7 +27,8 @@ In all cases the keys are stored in a local SQLite database.
 
 It currently uses PGPCore for PGP functionality.
 
-Future features:
+
+## TODO:
 * Self destruct and delete all keys
 * Button animations
 * Needs more design
