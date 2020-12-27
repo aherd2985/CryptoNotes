@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CryptoNotes.Views.SelfDestructPage">
+    <ContentPage.Content>
+        <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Spacing="20" Padding="15">
+
+                    <Label TextColor="#CC0000" FontFamily="{StaticResource ConsoleCode}" Text="SELF DESTRUCT" FontSize="45" />
+
+                    
+
+            <Button Margin="0,10,0,0" Text="DELETE ALL" Command="{Binding OpenWebCommand}" x:Name="DeleteBtn"
+                    BackgroundColor="#ff6600" TextColor="White" Clicked="SelfDestructClicked" />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -52,6 +52,10 @@ namespace CryptoNotes.Views
             MenuPages.Clear();
             MenuPages.Add(id, new NavigationPage(new InvitePage()));
             break;
+          case (int)MenuItemType.SelfDestruct:
+            MenuPages.Clear();
+            MenuPages.Add(id, new NavigationPage(new SelfDestructPage()));
+            break;
         }
       }
 

@@ -29,7 +29,8 @@ namespace CryptoNotes.Views
                 //dropdown pick private key, write message, hit encrypt, copy output
                 new HomeMenuItem {Id = MenuItemType.EncryptMessage, Title="Encrypt" },
                 //dropdown pick keychain, hit decrypt, display message
-                new HomeMenuItem {Id = MenuItemType.DecryptMessage, Title="Decrpyt" }
+                new HomeMenuItem {Id = MenuItemType.DecryptMessage, Title="Decrpyt" },
+                new HomeMenuItem {Id = MenuItemType.SelfDestruct, Title="Self Destruct" }
             };
 
       ListViewMenu.ItemsSource = menuItems;

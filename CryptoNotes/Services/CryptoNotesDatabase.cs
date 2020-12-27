@@ -73,5 +73,11 @@ namespace CryptoNotes.Services
       return Database.QueryAsync<Item>("DELETE FROM [Item] WHERE [Text] = '" + item.Text + "';");
       //return Database.DeleteAsync(deletedItem);
     }
+
+    public Task<List<Item>> DeleteAllItemsAsync()
+    {
+      // SQL queries are also possible
+      return Database.QueryAsync<Item>("DELETE FROM [Item];");
+    }
   }
 }
