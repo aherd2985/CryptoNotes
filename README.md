@@ -22,6 +22,7 @@ The app functionality is:
 - Send public keys through the share panel.
 - Send an encrypted message through the share panel.
 - Decrypt a PGP message.
+- Self destruct page to delete all keys.
 
 In all cases the keys are stored in a local SQLite database.
 
@@ -29,6 +30,5 @@ It currently uses PGPCore for PGP functionality.
 
 
 ## TODO:
-* Self destruct and delete all keys
 * Button animations
 * Needs more design
