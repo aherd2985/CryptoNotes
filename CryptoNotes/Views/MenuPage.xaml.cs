@@ -17,20 +17,20 @@ namespace CryptoNotes.Views
 
       menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.About, Title="About", Icon = "\uf05a" },
                 //manage, generate, private keys name them
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Your Keys" },
+                new HomeMenuItem {Id = MenuItemType.Browse, Title="Your Keys", Icon = "\uf6f3" },
                 //manage name sort by contact/keyname
-                new HomeMenuItem {Id = MenuItemType.PublicKeys, Title="Shared Keys" },
+                new HomeMenuItem {Id = MenuItemType.PublicKeys, Title="Shared Keys", Icon = "\uf084" },
                 //send public key
-                new HomeMenuItem {Id = MenuItemType.Invite, Title="Invite" },
+                new HomeMenuItem {Id = MenuItemType.Invite, Title="Invite", Icon = "\uf234" },
                 //links to report crimes, help lines, etc
                 //new HomeMenuItem {Id = MenuItemType.About, Title="Report" },
                 //dropdown pick private key, write message, hit encrypt, copy output
-                new HomeMenuItem {Id = MenuItemType.EncryptMessage, Title="Encrypt" },
+                new HomeMenuItem {Id = MenuItemType.EncryptMessage, Title="Encrypt", Icon = "\uf502" },
                 //dropdown pick keychain, hit decrypt, display message
-                new HomeMenuItem {Id = MenuItemType.DecryptMessage, Title="Decrpyt" },
-                new HomeMenuItem {Id = MenuItemType.SelfDestruct, Title="Self Destruct" }
+                new HomeMenuItem {Id = MenuItemType.DecryptMessage, Title="Decrpyt", Icon = "\ue058" },
+                new HomeMenuItem {Id = MenuItemType.SelfDestruct, Title="Self Destruct", Icon = "\uf7ba" }
             };
 
       ListViewMenu.ItemsSource = menuItems;

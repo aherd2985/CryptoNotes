@@ -21,4 +21,15 @@
     <PackageReference Include="Xamarin.Forms.Contacts" Version="1.0.5" />
     <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\FontAwesome5.otf" />
+    <None Remove="Resources\FontAwesome5Solid.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\FontAwesome5.otf" />
+    <EmbeddedResource Include="Resources\FontAwesome5Solid.otf" />
+  </ItemGroup>
 </Project>
