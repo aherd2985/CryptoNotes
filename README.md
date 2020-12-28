@@ -14,6 +14,10 @@ urlFragment: pgp
 # CryptoNotes
 Phone Application providing end-to-end encryption using PGP
 
+## Crypto Tip Jar
+<a rel="noreferrer" target="_blank" href="https://commerce.coinbase.com/checkout/e9376310-16a6-4195-acad-69b3da9cd7f4">Donate with Crypto</a>
+
+## Functionality
 The app functionality is:
 
 - View a list of generated PGP keys.
