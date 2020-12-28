@@ -57,14 +57,17 @@ namespace CryptoNotes.Services
 
     public Task<int> SaveItemAsync(Item item)
     {
-      if (item.Id != 0)
+      int dumbCheck =  Database.Table<Item>().Where(x => x.Text == item.Text).ToListAsync().Result.Count;
+      if (item.Id != 0 && dumbCheck == 1)
       {
         return Database.UpdateAsync(item);
       }
-      else
+      else if (dumbCheck == 0)
       {
         return Database.InsertAsync(item);
       }
+      else
+        return null;
     }
 
     public Task<List<Item>> DeleteItemAsync(Item item)
