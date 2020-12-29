@@ -7,6 +7,7 @@
             <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="20" Padding="15">
                     
+                    <Label Text="&#xf502;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
             <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Sign Message?" FontSize="45" />
 
                     <Switch x:Name="SignedF" OnColor="Purple" ThumbColor="Gray" IsToggled="False"  Toggled="OnToggled" />
