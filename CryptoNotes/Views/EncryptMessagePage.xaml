@@ -20,7 +20,14 @@
                             TitleColor="Red">
                     </Picker>
 
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Message:" FontSize="45" />
+                         <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf30d;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#1ae3f3" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Message to Encrypt:" FontSize="45"  />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
 
             <Editor x:Name="MessageTxt" TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Placeholder="Message here"
                     FontSize="50" BackgroundColor="#141d2b" PlaceholderColor="LightGray" HeightRequest="200"

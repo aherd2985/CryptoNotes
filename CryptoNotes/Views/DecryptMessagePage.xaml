@@ -12,6 +12,15 @@
                             TitleColor="Red">
                     </Picker>
 
+                         <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf3c2;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#CC0000" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Decrypted Message:" FontSize="45"  />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+
             <Editor x:Name="MessageTxt" TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Placeholder="Message here"
                     FontSize="50" BackgroundColor="#141d2b" PlaceholderColor="LightGray" HeightRequest="200"
                     Keyboard="Chat" 

@@ -5,7 +5,7 @@
             <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="20" Padding="15">
 
-                    <Label Text="&#xf234;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+                    <Label Text="&#xf234;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#1ae3f3" />
                     <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Select the Public Key to Share:" FontSize="45" />
 
                     <Picker x:Name="publicPicker"

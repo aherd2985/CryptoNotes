@@ -8,20 +8,64 @@
     <ContentPage.Content>
                         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
         <StackLayout Spacing="20" Padding="15">
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Text" FontSize="45" />
+
+            <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf120;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Title:" FontSize="35" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+
             <Entry TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Text}"
                    BackgroundColor="#141d2b" FontSize="55"  />
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description" FontSize="45" />
+
+            <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf4a6;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description" FontSize="45" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label> 
+
+
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Description}"
                     BackgroundColor="#141d2b" FontSize="55" Margin="0" Keyboard="Chat" />
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45" />
+
+
+                      <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf1fa;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45"  />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+
+
+
             <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
                     FontSize="50" BackgroundColor="#141d2b" Keyboard="Email"  />
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Password:" FontSize="45" />
+
+
+            <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf21b;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Password:" FontSize="45" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label> 
+
+
+
             <Entry TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PasswordKey}"
                     FontSize="50" BackgroundColor="#141d2b" Keyboard="Plain" IsPassword="true" Placeholder="Password"  />
             <Button Margin="0,10,0,0" Text="Generate Private Key" Command="{Binding OpenWebCommand}" x:Name="createKeyBtn"
                     BackgroundColor="#0db4ba" TextColor="White" Clicked="GeneratePrivateKey" />
+
         </StackLayout>
                             </ScrollView>
     </ContentPage.Content>

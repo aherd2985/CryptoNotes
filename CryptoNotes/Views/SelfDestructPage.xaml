@@ -5,7 +5,15 @@
         <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <StackLayout Spacing="20" Padding="15">
 
-                    <Label TextColor="#CC0000" FontFamily="{StaticResource ConsoleCode}" Text="SELF DESTRUCT" FontSize="45" />
+                     <Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="&#xf6e0;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#CC0000" />
+            <Span TextColor="#CC0000" FontFamily="{StaticResource ConsoleCode}" Text="SELF DESTRUCT" FontSize="45" />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+
 
             <Button Margin="0,10,0,0" Text="DELETE ALL" Command="{Binding OpenWebCommand}" x:Name="DeleteBtn"
                     BackgroundColor="#ff6600" TextColor="White" Clicked="SelfDestructClicked" />
