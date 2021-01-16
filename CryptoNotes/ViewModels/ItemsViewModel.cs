@@ -22,6 +22,7 @@ namespace CryptoNotes.ViewModels
       MessagingCenter.Subscribe<NewItemPage, Item>(this, "AddItem", async (obj, item) =>
       {
         Item newItem = item as Item;
+        newItem.PasswordKey = "";
         await App.Database.SaveItemAsync(newItem);
       });
 

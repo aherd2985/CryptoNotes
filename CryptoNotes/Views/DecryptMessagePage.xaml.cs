@@ -39,7 +39,7 @@ namespace CryptoNotes.Views
         // Decrypt file and verify
         //await pgp.DecryptFileAndVerifyAsync(encryptedMessage, decryptedMessage, publicFile, privateFile, viewModel.Item.PasswordKey);
 
-        await pgp.DecryptFileAsync(encryptedMessage, decryptedMessage, privateFile, privateKey.PasswordKey);
+        await pgp.DecryptFileAsync(encryptedMessage, decryptedMessage, privateFile, PwdTxt.Text);
 
       }
 

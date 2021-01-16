@@ -31,9 +31,17 @@ namespace CryptoNotes.Views
     {
       // Perform an action after examining e.Value
       if (e.Value)
+      {
         privatePicker.IsVisible = true;
+        PwdLbl.IsVisible = true;
+        PwdTxt.IsVisible = true;
+      }
       else
+      {
         privatePicker.IsVisible = false;
+        PwdLbl.IsVisible = false;
+        PwdTxt.IsVisible = false;
+      }
     }
 
 
@@ -69,7 +77,7 @@ namespace CryptoNotes.Views
             string privateFile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "private.asc");
             using (var streamWriter = new StreamWriter(privateFile, true))
               streamWriter.WriteLine(privateKey.PrivateKey);
-            await pgp.EncryptFileAndSignAsync(messageContent, encryptedMessage, publicFile, privateFile, privateKey.PasswordKey, true, true);
+            await pgp.EncryptFileAndSignAsync(messageContent, encryptedMessage, publicFile, privateFile, PwdTxt.Text, true, true);
 
             using (StreamWriter streamWriter = new StreamWriter(privateFile, true))
               streamWriter.WriteLine(DateTime.UtcNow);

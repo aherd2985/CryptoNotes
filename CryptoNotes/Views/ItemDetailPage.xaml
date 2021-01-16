@@ -1,69 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+<ContentPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CryptoNotes.Views.ItemDetailPage" Title="{Binding Title}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-                        <ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-        <StackLayout Spacing="20" Padding="15" BackgroundColor="Black">
-
-            <Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <Span Text="&#xf120;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
-            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Title:" FontSize="35" />
-        </FormattedString>
-    </Label.FormattedText>
-</Label>
-
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Text}"
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Text="Delete" Clicked="Delete_Clicked" />
+	</ContentPage.ToolbarItems>
+	<ContentPage.Content>
+		<ScrollView BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			<StackLayout Spacing="20" Padding="15" BackgroundColor="Black">
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<Span Text="&#xf120;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+							<Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Title:" FontSize="35" />
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Text}"
                     BackgroundColor="#141d2b" FontSize="55" />
-
-            
-            <Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <Span Text="&#xf4a6;" FontFamily="FontAwesomeSolid" FontSize="37" TextColor="#9f00ff" />
-            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description:" FontSize="45" />
-        </FormattedString>
-    </Label.FormattedText>
-</Label>
-            
-
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Description}"
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<Span Text="&#xf4a6;" FontFamily="FontAwesomeSolid" FontSize="37" TextColor="#9f00ff" />
+							<Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Description:" FontSize="45" />
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.Description}"
                     FontSize="50" BackgroundColor="#141d2b"  />
-
-            <Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <Span Text="&#xf1fa;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
-            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45"  />
-        </FormattedString>
-    </Label.FormattedText>
-</Label>
-
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
+				<Label>
+					<Label.FormattedText>
+						<FormattedString>
+							<Span Text="&#xf1fa;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
+							<Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Email:" FontSize="45"  />
+						</FormattedString>
+					</Label.FormattedText>
+				</Label>
+				<Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.EmailKey}"
                     FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" />
-             <Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <Span Text="&#xf21b;" FontFamily="FontAwesomeSolid" FontSize="35" TextColor="#9f00ff" />
-            <Span TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Password:" FontSize="45" />
-        </FormattedString>
-    </Label.FormattedText>
-</Label> 
-            <Entry TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PasswordKey}"
-                    FontSize="50" BackgroundColor="#141d2b" IsReadOnly="true" IsPassword="true"  />
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Private Key:" FontSize="45" />
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PrivateKey}"
+				<Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Private Key:" FontSize="45" />
+				<Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PrivateKey}"
                     FontSize="25" BackgroundColor="#141d2b" IsReadOnly="true" />
-            <Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Public Key:" FontSize="45" />
-            <Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PublicKey}"
+				<Label TextColor="#9f00ff" FontFamily="{StaticResource ConsoleCode}" Text="Public Key:" FontSize="45" />
+				<Editor TextColor="#ffaf00" FontFamily="{StaticResource ConsoleCode}" Text="{Binding Item.PublicKey}"
                     FontSize="25" BackgroundColor="#141d2b" IsReadOnly="true" />
-            <Button Margin="0,10,0,0" Text="Re-key" Command="{Binding OpenWebCommand}"
+				<Button Margin="0,10,0,0" Text="Re-key" Command="{Binding OpenWebCommand}"
                     BackgroundColor="#007fdf" TextColor="White" Clicked="GeneratePrivateKey" />
-        </StackLayout>
-                            </ScrollView>
-    </ContentPage.Content>
+			</StackLayout>
+		</ScrollView>
+	</ContentPage.Content>
 </ContentPage>
